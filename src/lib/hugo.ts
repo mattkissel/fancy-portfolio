@@ -9,7 +9,7 @@ export async function getPostsByTag(tag: string): Promise<Post[]> {
   const url = `${HUGO_BASE}/tags/${tag}/index.json`;
 
   const res = await fetch(url, {
-    next: { revalidate: 3600 }, // ISR: revalidate every hour
+    next: { revalidate: 60 }, // ISR: revalidate every hour
   });
 
   if (!res.ok) {

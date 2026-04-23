@@ -6,6 +6,6 @@ export type Post = {
   tags: string[];
   tech: string[] | null;
   github: string | null;
-  links: string[] | null;
+  links: {label:string, url: string}[] | null;
   content: string;
 };

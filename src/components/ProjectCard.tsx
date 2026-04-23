@@ -49,16 +49,19 @@ export function ProjectCard({ post }: Props) {
             GitHub ↗
           </a>
         )}
-        {post.demo && (
-          <a
-            href={post.demo}
+        {post.links && post.links.map( l => (
+            <a
+            href={l.url}
             target="_blank"
             rel="noopener noreferrer"
             className="font-mono text-xs text-zinc-400 underline-offset-4 hover:text-zinc-100 hover:underline"
-          >
-            Live demo ↗
-          </a>
-        )}
+            key={l.url}
+            >
+                {l.label} ↗
+            </a>
+        ))}
+
+
         <a
           href={post.url}
           target="_blank"
