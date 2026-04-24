@@ -5,8 +5,8 @@ const HUGO_BASE =
     ? "http://localhost:1313"
     : "https://mattckissel.com";
 
-export async function getPostsByTag(tag: string): Promise<Post[]> {
-  const url = `${HUGO_BASE}/tags/${tag}/index.json`;
+export async function getPostsByCategory(category: string): Promise<Post[]> {
+  const url = `${HUGO_BASE}/categories/${category}/index.json`;
 
   const res = await fetch(url, {
     next: { revalidate: 3600 }, // ISR: revalidate every hour

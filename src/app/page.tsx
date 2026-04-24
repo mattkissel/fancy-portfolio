@@ -1,11 +1,11 @@
 import Image from "next/image";
 import { ProjectCard } from "@/components/ProjectCard";
-import { getPostsByTag } from "@/lib/hugo";
+import { getPostsByCategory } from "@/lib/hugo";
 import type { Post } from "@/types/post";
 
 
 export default async function  Home() {
-  const posts = await getPostsByTag("portfolio");
+  const posts = await getPostsByCategory("portfolio");
 
   // can call other post tags here
   // then merge into one deduplicated list.
@@ -33,7 +33,7 @@ export default async function  Home() {
               hello@mattckissel.com
             </a></li>
             <li><a href="https://github.com/mattkissel" className="text-sm text-zinc-500 border-b border-zinc-700">
-              Github
+              GitHub
             </a></li>
             <li><a href="https://www.linkedin.com/in/matthew-kissel/" className="text-sm text-zinc-500 border-b border-zinc-700">
             LinkedIn

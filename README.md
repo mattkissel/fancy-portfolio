@@ -28,7 +28,7 @@ src/
   app/
     page.tsx              # Homepage — fetches and renders project cards
   components/
-    ProjectCard.tsx       # Card with title, summary, tech badges, links
+    ProjectCard.tsx       # Card with title, summary, skill badges, links
   lib/
     hugo.ts               # Fetches and types the Hugo JSON feed
   types/
@@ -43,8 +43,9 @@ Posts are expected to have this front matter shape:
 title = "My Project"
 date = 2026-01-01
 summary = "A short description"
-tags = ["portfolio", "react"]
-tech = ["React", "Vite"]
+tags = ["progamming", "react"]
+categories = ["portfolio"]
+skills = ["React", "Vite"]
 github = "https://github.com/..."
 
 links = [
@@ -53,8 +54,6 @@ links = [
 ]
 
 ```
-
-The `links` array replaces the single `demo` field and supports any number of labeled links per project. Declare any top-level fields (like `categories`) before the first `[[links]]` block in TOML.
 
 ## Local development
 

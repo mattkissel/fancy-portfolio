@@ -4,7 +4,7 @@ export type Post = {
   url: string;
   summary: string;
   tags: string[];
-  tech: string[] | null;
+  skills: string[] | null;
   github: string | null;
   links: {label:string, url: string}[] | null;
   content: string;

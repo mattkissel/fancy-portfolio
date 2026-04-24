@@ -23,10 +23,10 @@ export function ProjectCard({ post }: Props) {
       {/* Summary */}
       <p className="text-sm leading-relaxed text-zinc-400">{post.summary}</p>
 
-      {/* Tech badges */}
-      {post.tech && post.tech.length > 0 && (
+      {/* Skill badges */}
+      {post.skills && post.skills.length > 0 && (
         <ul className="flex flex-wrap gap-2">
-          {post.tech.map((t) => (
+          {post.skills.map((t) => (
             <li
               key={t}
               className="rounded-md bg-zinc-800 px-2 py-0.5 font-mono text-xs text-zinc-300"
